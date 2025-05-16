@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="{{url_for('static',filename='images/icon.jpg')}}"
+    />
+  </head>
+  <body>
+    <h1>Rock-Paper-Scissors</h1>
+    <br />
+    <form method="post">
+      <button name="choice" value="Rock">
+        <img
+          src="{{url_for('static',filename='images/Rock.png')}}"
+          alt="Rock"
+        />
+      </button>
+
+      <button name="choice" value="Paper">
+        <img
+          src="{{url_for('static',filename='images/Paper.png')}}"
+          alt="Paper"
+        />
+      </button>
+
+      <button name="choice" value="Scissors">
+        <img
+          src="{{url_for('static',filename='images/Scissors.png')}}"
+          alt="Scissors"
+        />
+      </button>
+      <br />
+      <div class="controls">
+        <button name="reset" value="true" class="reset-button">Reset</button>
+      </div>
+    </form>
+
+    {% if result %}
+    <div class="result">
+      <h2>{{ result }}</h2>
+      <div class="choice-images-row">
+        <div class="choice-box">
+          <p>You chose:</p>
+          <img
+            src="{{url_for('static',filename='images/'+user+'.png')}}"
+            alt="{{ user }}"
+          />
+        </div>
+        <div class="choice-box">
+          <p>Computer chose:</p>
+          <img
+            src="{{url_for('static',filename='images/'+ computer +'.png')}}"
+            alt="{{ computer }}"
+          />
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 30px auto;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button img {
+  width: 150px;
+  height: 130px;
+  transition: transform 0.2s;
+}
+
+button:hover img {
+  transform: scale(1.1);
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.choice-images-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.choice-box {
+  text-align: center;
+}
+
+.choice-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.reset-button {
+  background-color: #999898;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  margin: 20px;
+  font-size: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #acb1b1;
+}
